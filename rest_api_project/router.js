@@ -33,6 +33,7 @@ router.get('/quotes/:id', asyncHandler( async(req, res, next) => {
  })
 );
 
+// Get a random quote by its id
 router.get('/quotes/random', asyncHandler( async(req, res) => {
     const quote = await records.getRandomQuote()
     res.json(quote)
